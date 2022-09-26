@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpflekt10"
+        xmlns:viewmodels="clr-namespace:SmartApp.MVVM.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800">
+    
     <Window.DataContext>
-        <viewmodels:MainViewModel />
+        <viewmodels: MainViewModel/>
     </Window.DataContext>
 
     <Border Background="#333333" CornerRadius="12">
@@ -17,8 +21,8 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            <!--<ContentControl Grid.Row="0" Content="{Binding CurrentView}" />-->
-            <!--<components:MenuComponent Grid.Row="1" Margin="0 -140 0 0" />-->
+            <ContentControl Grid.Row="0" Content="{Binding CurrentView}" />
+            <components:MenuComponent Grid.Row="1" Margin="0 -140 0 0" />
         </Grid>
 
     </Border>
